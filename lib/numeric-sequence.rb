@@ -1,11 +1,9 @@
 require "numeric-sequence/version"
 
-class NumericSequence < Enumerator
-  def initialize
-    super 0..1.0/0.0
-  end
-  
-  def to_s
-    self.next.to_s
+NumericSequence = Enumerator.new do |yielder|
+  number = 0
+  loop do
+    number += 1
+    yielder.yield number
   end
 end
