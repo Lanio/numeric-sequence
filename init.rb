@@ -1,1 +1,0 @@
-require 'numeric_sequence'

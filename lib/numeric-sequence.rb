@@ -1,6 +1,6 @@
-load 'generator.rb'
+require "numeric-sequence/version"
 
-class NumericSequence < Generator
+class NumericSequence < Enumerator
   def initialize
     super 0..1.0/0.0
   end
